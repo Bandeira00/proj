@@ -1,0 +1,16 @@
+Aluno;Horas de Estudo/semana;Aulas de Reforço;Tarefas Entregues;Passou (Sim = 1, Não = 0)
+1;2;0;Não;0
+2;4;1;Sim;0
+3;6;1;Sim;0
+4;8;2;Sim;0
+5;10;2;Sim;1
+6;12;3;Sim;1
+7;14;3;Sim;1
+8;16;4;Sim;1
+9;18;4;Sim;1
+10;20;5;Sim;1
+11;22;5;Sim;1
+12;24;6;Sim;1
+13;26;6;Sim;1
+14;28;7;Sim;1
+15;30;8;Sim;1
