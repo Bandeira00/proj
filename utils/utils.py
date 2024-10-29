@@ -1,6 +1,6 @@
 import pandas as pd
 
-def takePandas(self, n):
+def takePandas(self, n=5):
     rows = self.take(n)
     df = pd.DataFrame(rows, columns=self.columns)
     return df
