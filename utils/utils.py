@@ -14,6 +14,7 @@ def createSparkSesion():
     
     spark = (SparkSession.builder 
         .appName("Analises") 
+        .config("spark.driver.memory", "30g")
         .getOrCreate())
     
     print(spark)
