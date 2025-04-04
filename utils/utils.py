@@ -15,6 +15,7 @@ def createSparkSesion():
     spark = (SparkSession.builder 
         .appName("Analises") 
         .config("spark.driver.memory", "30g")
+        .config("spark.jars","/home/gabriel/Documents/jars/postgresql-42.7.5.jar")
         .getOrCreate())
     
     print(spark)
