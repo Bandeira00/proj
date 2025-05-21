@@ -6,8 +6,14 @@ def takePandas(self, n=5):
 
     return df
 
+def countNulls(self):
+    from pyspark.sql.functions import col, when, count
+    df_nulls = self.select([count(when(col(c).isNull(), c)).alias(c) for c in self.columns]).takePandas()
+    return df_nulls
+
 from pyspark.sql import DataFrame
 DataFrame.takePandas = takePandas
+DataFrame.count_nulls = countNulls
 
 def createSparkSesion():
     from pyspark.sql import SparkSession
@@ -24,3 +30,7 @@ def createSparkSesion():
 
 def save_intermediary_step(df, path,mode="overwrite"):
         df.write.parquet(path).mode(mode)
+
+
+
+
